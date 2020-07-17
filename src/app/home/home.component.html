@@ -1,0 +1,119 @@
+
+<div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-world-2 text-warning"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Continents</p>
+              <p class="card-title">{{generalData?.con}}<p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>       
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-pin-3 text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Countries</p>
+              <p class="card-title">{{generalData?.cou}}<p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>       
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-istanbul text-danger"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Cities</p>
+              <p class="card-title">{{generalData?.cit}}<p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>        
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-favourite-28 text-primary"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Years</p>
+              <p class="card-title">{{years}}<p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-3">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">World </h5>       
+      </div>
+      <div class="card-body centerPercentag ">  
+         <circle-progress [percent]="worldPercentage"></circle-progress> 
+      <div class="card-footer ">        
+        <hr>        
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="col-md-9">
+    <app-map></app-map>
+</div>
+ 
+
+
+
+
+
+
