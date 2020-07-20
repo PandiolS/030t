@@ -18,7 +18,8 @@ export class MapComponent implements OnInit, AfterViewInit {
   public countries = [];
   
   constructor(
-    private service: ServiceService
+    private service: ServiceService,
+    private zone: NgZone
   ) { }
 
   ngOnInit() {
@@ -43,6 +44,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
   public createMap(countries) {
+    this.zone.runOutsideAngular(() => {
     let chart = am4core.create("chartdiv", am4maps.MapChart);
     chart.geodata = am4geodata_worldLow;
     chart.projection = new am4maps.projections.Miller();
@@ -68,6 +70,8 @@ export class MapComponent implements OnInit, AfterViewInit {
     polygonSeries.fillOpacity = 0.8;
     polygonSeries.hiddenInLegend = true;
     polygonSeries.mapPolygons.template.nonScalingStroke = true;
+
+  });
 
   }
 
