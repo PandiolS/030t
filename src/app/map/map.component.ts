@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, AfterViewInit } from '@angular/core';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldHigh";
@@ -12,7 +12,7 @@ am4core.useTheme(am4themes_animated);
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit, AfterViewInit {
 
   public dataSource: any;
   public countries = [];
@@ -22,6 +22,10 @@ export class MapComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+   // this.getMapData();
+  }
+
+  ngAfterViewInit() {
     this.getMapData();
   }
 
