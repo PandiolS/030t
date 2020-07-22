@@ -2,3 +2,8 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.contName {
+    font-size: medium;
+    font-weight: 400;
+}
