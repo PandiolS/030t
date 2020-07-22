@@ -19,4 +19,9 @@ export class ServiceService {
     const url = `https://raw.githubusercontent.com/PandiolS/jsonFiles/master/map_data`;
     return this.http.get(url, { observe: 'response', responseType: 'text' });
   }
+
+  public getListData(): Observable<HttpResponse<any>> {
+    const url = `https://raw.githubusercontent.com/PandiolS/jsonFiles/master/conts_data.json`;
+    return this.http.get(url, { observe: 'response', responseType: 'text' });
+  }
 }
