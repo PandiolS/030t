@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Visited Continents</h1>
+<hr>  
+<div mat-dialog-content>
+  <div class="card">   
+    <div class="card-body">
+      <ul class="list-unstyled team-members">
+        <li *ngFor="let cont of continents">
+          <div class="row">
+            <div class="col-md-2 col-2">
+              <div class="avatar">
+                <img src="../assets/img/continents/{{cont.img}}" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+              </div>
+            </div>
+            <div class="col-md-7 col-7">
+              <span class="contName">{{cont.name}}</span>             
+            </div>
+            <div class="col-md-3 col-3 text-right">
+            </div>
+          </div> 
+          <hr style="margin-top: 5px;">  
+        </li>  
+      </ul>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
