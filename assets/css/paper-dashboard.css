@@ -3319,7 +3319,12 @@ License - nucleoapp.com/license/
   float: right;
   /* width: calc(100% - 260px); */
   width: 100%;
-  background-color: #f4f3ef;
+  /* background-color: #f4f3ef; */
+  background-image: url("../img/1318015.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
   .main-panel > .content {
     padding: 0 30px 30px;
@@ -3609,7 +3614,7 @@ License - nucleoapp.com/license/
 .card {
   border-radius: 12px;
   box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
-  background-color: #FFFFFF;
+  background-color: #fffffff2;
   color: #252422;
   margin-bottom: 20px;
   position: relative;
