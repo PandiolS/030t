@@ -3,7 +3,7 @@
 <div mat-dialog-content>
 
   <mat-accordion *ngFor="let item of cities">
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="margin-bottom: 15px; width: 300px">      
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="margin-bottom: 15px;">      
       <mat-expansion-panel-header>
         <mat-panel-title>
           <flag-icon country="{{item.country.fl}}"></flag-icon> &nbsp; &nbsp;
