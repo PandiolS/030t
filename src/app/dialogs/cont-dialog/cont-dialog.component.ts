@@ -23,11 +23,9 @@ export class ContDialogComponent implements OnInit {
   }
 
   public getConts() {
-    this.service.getListData().subscribe((data: any) => {
-      this.dataSource = JSON.parse(data.body);      
-     console.log("this.data"), this.dataSource;
-      this.continents = this.dataSource.conts;     
-       
+    this.service.getCities().subscribe((data: any) => {
+      this.dataSource = JSON.parse(data.body);
+      this.continents = this.dataSource.conts;
     },
       (error: any) => { }
     );

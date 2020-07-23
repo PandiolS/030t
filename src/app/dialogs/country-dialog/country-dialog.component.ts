@@ -19,14 +19,13 @@ export class CountryDialogComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getCounts();
+    this.getCountries();
   }
 
-  public getCounts() {
-    this.service.getListData().subscribe((data: any) => {
+  public getCountries() {
+    this.service.getCities().subscribe((data: any) => {
       this.dataSource = JSON.parse(data.body);     
-      this.countries = this.dataSource.count;   
-       
+      this.countries = this.dataSource.cities; 
     },
       (error: any) => { }
     );

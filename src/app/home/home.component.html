@@ -12,7 +12,7 @@
           <div class="col-7 col-md-8">
             <div class="numbers">
               <p class="card-category">Continents</p>
-              <p class="card-title">{{contsLength}}<p>
+              <p class="card-title">{{continentsCount}}<p>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
           <div class="col-7 col-md-8">
             <div class="numbers">
               <p class="card-category">Countries</p>
-              <p class="card-title">{{countLength}}<p>
+              <p class="card-title">{{countryCount}}<p>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
     </div>
   </div>
   <div class="col-lg-3 col-md-6 col-sm-6">
-    <div class="card card-stats">
+    <div class="card card-stats" (click)="openCityDialog()">
       <div class="card-body ">
         <div class="row">
           <div class="col-5 col-md-4">
@@ -56,7 +56,7 @@
           <div class="col-7 col-md-8">
             <div class="numbers">
               <p class="card-category">Cities</p>
-              <p class="card-title">{{generalData?.cit}}<p>
+              <p class="card-title">{{citiesCount}}<p>
             </div>
           </div>
         </div>

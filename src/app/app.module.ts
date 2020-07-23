@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
 
+import { NgxFlagIconCssModule } from 'ngx-flag-icon-css'
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContDialogComponent } from './dialogs/cont-dialog/cont-dialog.component';
 import { CountryDialogComponent } from './dialogs/country-dialog/country-dialog.component';
 import { CityDialogComponent } from './dialogs/city-dialog/city-dialog.component';
-import { MatDialogModule, MatButtonModule } from '@angular/material';
+import { MatDialogModule, MatButtonModule, MatAccordion, MatIconModule, MatExpansionModule, MatExpansionPanel } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,9 @@ import { MatDialogModule, MatButtonModule } from '@angular/material';
     BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
+    MatIconModule,
+    MatExpansionModule,
+    NgxFlagIconCssModule,
     NgCircleProgressModule.forRoot({
       "radius": 70,
       "maxPercent": 100,

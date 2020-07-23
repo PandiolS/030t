@@ -1,3 +1,36 @@
-<p>
-  city-dialog works!
-</p>
+<h1 mat-dialog-title>Visited Cities</h1>
+<hr>  
+<div mat-dialog-content>
+
+  <mat-accordion *ngFor="let item of cities">
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="margin-bottom: 15px; width: 300px">      
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <flag-icon country="{{item.country.fl}}"></flag-icon> &nbsp; &nbsp;
+          {{item.country.name}}
+        </mat-panel-title>            
+      </mat-expansion-panel-header>    
+      <div class="card">   
+        <div class="card-body">
+          <ul class="list-unstyled team-members">
+            <li  *ngFor="let city of item.country.cities">
+              <div class="row">
+                <div class="col-md-2 col-2">
+                  <i class="nc-icon nc-check-2 text-success"></i>
+                </div>
+                <div class="col-md-7 col-7">
+                  <span class="contName">{{city.name}}</span>                        
+                </div>
+                <div class="col-md-3 col-3 text-right">
+                </div>           
+              </div> 
+              <hr style="margin-top: 5px;">  
+            </li>  
+          </ul>
+        </div>
+      </div>    
+    </mat-expansion-panel>
+  </mat-accordion>  
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
